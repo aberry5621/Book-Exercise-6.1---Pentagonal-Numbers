@@ -7,9 +7,24 @@
 //
 
 #include <iostream>
+#include <iomanip>
+using namespace std;
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+int pentify(int n) {
+    
+    return n * (3 * n - 1) / 2;
+}
+
+int main() {
+
+    cout << "Pentagonal Numbers for n=(1:100) \n";
+    
+    for (int i = 0; i < 10; i++) {
+        for (int j = 1; j <= 10; j++) {
+            cout << setw(6) << left << pentify (i * 10 + j);
+        }
+        cout << endl;
+    }
+    
     return 0;
 }
